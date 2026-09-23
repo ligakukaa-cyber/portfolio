@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Владислав — сайты, лендинги и веб-инструменты на заказ</title>
+<meta name="description" content="Разработка сайтов, лендингов и веб-инструментов с нуля: 3D и анимация в браузере, рабочая логика, формы и расчёты. Живые примеры работ — открываются и работают.">
+<meta name="theme-color" content="#07070A">
+<meta property="og:title" content="Владислав — сайты, лендинги и веб-инструменты на заказ">
+<meta property="og:description" content="Живые примеры работ: 3D-витрина часов, лендинг с разборкой прокруткой, калькулятор цены, боевой сайт на домене.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body class="is-loading">
+
+<!-- ЗАГРУЗЧИК -->
+<div class="loader" id="loader" aria-hidden="true">
+  <div class="loader-inner">
+    <div class="loader-mark">В<span>Х</span></div>
+    <div class="loader-bar"><i id="loaderFill"></i></div>
+    <div class="loader-num"><span id="loaderNum">00</span><em>%</em></div>
+  </div>
+</div>
+
+<!-- КУРСОР -->
+<div class="cursor" id="cursor" aria-hidden="true"><i></i></div>
+
+<!-- ФОН -->
+<canvas class="gold-canvas" id="gold" aria-hidden="true"></canvas>
+<div class="grain" aria-hidden="true"></div>
+<div class="vignette" aria-hidden="true"></div>
+
+<!-- ШАПКА -->
+<header class="nav" id="nav">
+  <a class="nav-brand" href="#top" data-cursor="link">
+    <span class="nav-mark">ВХ</span>
+    <span class="nav-name">Владислав<em>веб-разработка</em></span>
+  </a>
+  <nav class="nav-links">
+    <a href="#work" data-cursor="link">Работы</a>
+    <a href="#process" data-cursor="link">Процесс</a>
+    <a href="#contact" data-cursor="link">Контакты</a>
+  </nav>
+  <a class="nav-cta magnetic" href="https://t.me/VladisavSSS" target="_blank" rel="noopener" data-cursor="link">
+    <span>Написать в Telegram</span>
+  </a>
+</header>
+
+<!-- ПЕРВЫЙ ЭКРАН -->
+<section class="hero" id="top">
+  <div class="hero-inner">
+    <div class="hero-eyebrow anim-fade">
+      <i class="dot"></i> Свободен для новых проектов
+    </div>
+
+    <h1 class="hero-title">
+      <span class="line"><span>Сайты, которые</span></span>
+      <span class="line"><span>работают, <em>а не</em></span></span>
+      <span class="line"><span>просто красиво</span></span>
+      <span class="line"><span>выглядят</span></span>
+    </h1>
+
+    <p class="hero-sub anim-fade">
+      Делаю сайты, лендинги и веб-инструменты с нуля — без конструкторов и шаблонов.
+      3D и анимация прямо в браузере, живые формы, расчёты и логика, которая считает по-настоящему.
+    </p>
+
+    <div class="hero-actions anim-fade">
+      <a class="btn btn-gold magnetic" href="#work" data-cursor="link"><span>Смотреть работы</span></a>
+      <a class="btn btn-ghost magnetic" href="https://t.me/VladisavSSS" target="_blank" rel="noopener" data-cursor="link"><span>Обсудить проект</span></a>
+    </div>
+  </div>
+
+  <div class="hero-meta">
+    <div class="hero-meta-item anim-fade"><b>8</b><span>живых проектов<br>в портфолио</span></div>
+    <div class="hero-meta-item anim-fade"><b>3D</b><span>и анимация<br>в браузере</span></div>
+    <div class="hero-meta-item anim-fade"><b>2 дня</b><span>до первой<br>версии страницы</span></div>
+  </div>
+
+  <a class="scroll-cue" href="#work" aria-label="Листать вниз" data-cursor="link">
+    <span>листайте</span><i></i>
+  </a>
+</section>
+
+<!-- БЕГУЩАЯ СТРОКА -->
+<div class="marquee" aria-hidden="true">
+  <div class="marquee-track">
+    <span>Лендинги</span><i>✦</i><span>Интернет-магазины</span><i>✦</i><span>3D в браузере</span><i>✦</i>
+    <span>Калькуляторы и формы</span><i>✦</i><span>Анимация</span><i>✦</i><span>Telegram-боты</span><i>✦</i>
+    <span>Лендинги</span><i>✦</i><span>Интернет-магазины</span><i>✦</i><span>3D в браузере</span><i>✦</i>
+    <span>Калькуляторы и формы</span><i>✦</i><span>Анимация</span><i>✦</i><span>Telegram-боты</span><i>✦</i>
+  </div>
+</div>
+
+<!-- МАНИФЕСТ -->
+<section class="manifest">
+  <div class="wrap">
+    <p class="manifest-text reveal-words">
+      Сайт нужен не для красоты, а ради заявок. Поэтому начинаю не с картинки,
+      а с вопроса: кто ваш клиент и что он должен сделать на странице.
+      Анимация, 3D и расчёты появляются там, где помогают продавать, — и нигде больше.
+    </p>
+  </div>
+</section>
+
+
+<!-- РАБОТЫ -->
+<section class="works" id="work">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="sec-num anim-fade">01</span>
+      <h2 class="sec-title anim-up">Работы</h2>
+      <p class="sec-note anim-fade">Каждая ссылка открывает живую страницу — можно кликать, считать, крутить 3D.</p>
+    </div>
+  </div>
+
+  <div class="wrap works-list">
+
+    <article class="work reveal-work">
+      <a class="work-media tilt" href="https://xn--80aafa3ac6aajpjmc4cn9l.xn--p1ai/" target="_blank" rel="noopener" data-cursor="open">
+        <img src="assets/start.jpg" alt="Лендинг «Старт в инновациях» — боевой сайт на домене" loading="lazy" decoding="async">
+        <span class="work-shine" aria-hidden="true"></span>
+      </a>
+      <div class="work-body">
+        <div class="work-top"><span class="work-idx">01</span><span class="badge badge-live">Боевой проект</span></div>
+        <h3><a href="https://xn--80aafa3ac6aajpjmc4cn9l.xn--p1ai/" target="_blank" rel="noopener" data-cursor="link">Лендинг конкурса «Старт в инновациях»</a></h3>
+        <p>Сдан заказчику и работает на своём домене: приём заявок с проверкой полей, подключённая
+          Яндекс.Метрика с целями по каждой кнопке, адаптив от 390 пикселей. Вес страницы — 259 КБ.</p>
+        <ul class="work-tags"><li>Лендинг</li><li>Форма заявок</li><li>Метрика · цели</li><li>Домен</li></ul>
+        <a class="work-link magnetic" href="https://xn--80aafa3ac6aajpjmc4cn9l.xn--p1ai/" target="_blank" rel="noopener" data-cursor="open"><span>Открыть сайт</span><i></i></a>
+      </div>
+    </article>
+
+    <article class="work reveal-work">
+      <a class="work-media tilt" href="https://ligakukaa-cyber.github.io/home-shop-demo/" target="_blank" rel="noopener" data-cursor="open">
+        <img src="assets/shop.jpg" alt="ОХРА — интернет-магазин с каталогом, корзиной и оплатой" loading="lazy" decoding="async">
+        <span class="work-shine" aria-hidden="true"></span>
+      </a>
+      <div class="work-body">
+        <div class="work-top"><span class="work-idx">02</span><span class="badge">Демо</span></div>
+        <h3><a href="https://ligakukaa-cyber.github.io/home-shop-demo/" target="_blank" rel="noopener" data-cursor="link">Интернет-магазин с корзиной и оплатой</a></h3>
+        <p>Каталог с фильтрами по разделу, цене и наличию, поиск, быстрый просмотр товара,
+          корзина с промокодом и расчётом доставки. Оформление в три шага до экрана оплаты.
+          Товары лежат в отдельном файле — добавлять и менять цены можно без вёрстки.</p>
+        <ul class="work-tags"><li>Каталог 48 позиций</li><li>Фильтры и поиск</li><li>Корзина</li><li>Оформление и оплата</li></ul>
+        <a class="work-link magnetic" href="https://ligakukaa-cyber.github.io/home-shop-demo/" target="_blank" rel="noopener" data-cursor="open"><span>Собрать заказ</span><i></i></a>
+      </div>
+    </article>
+
+    <article class="work reveal-work">
+      <a class="work-media tilt" href="https://ligakukaa-cyber.github.io/repair-landing-demo/" target="_blank" rel="noopener" data-cursor="open">
+        <img src="assets/repair.jpg" alt="СТЕНА — лендинг ремонта квартир с калькулятором сметы" loading="lazy" decoding="async">
+        <span class="work-shine" aria-hidden="true"></span>
+      </a>
+      <div class="work-body">
+        <div class="work-top"><span class="work-idx">03</span><span class="badge">Демо</span></div>
+        <h3><a href="https://ligakukaa-cyber.github.io/repair-landing-demo/" target="_blank" rel="noopener" data-cursor="link">Лендинг ремонта с расчётом сметы</a></h3>
+        <p>Калькулятор считает стоимость по площади, типу работ и допуслугам, показывает срок
+          и сам переносит расчёт в заявку. Блок «до/после» листается перетаскиванием.</p>
+        <ul class="work-tags"><li>Калькулятор</li><li>До/после</li><li>Заявки</li><li>Адаптив</li></ul>
+        <a class="work-link magnetic" href="https://ligakukaa-cyber.github.io/repair-landing-demo/" target="_blank" rel="noopener" data-cursor="open"><span>Посчитать ремонт</span><i></i></a>
+      </div>
+    </article>
+
+    <article class="work reveal-work">
+      <a class="work-media tilt" href="https://ligakukaa-cyber.github.io/coffee-shop-demo/" target="_blank" rel="noopener" data-cursor="open">
+        <img src="assets/coffee.jpg" alt="ЗЁРНА — сайт кофейни с меню и корзиной" loading="lazy" decoding="async">
+        <span class="work-shine" aria-hidden="true"></span>
+      </a>
+      <div class="work-body">
+        <div class="work-top"><span class="work-idx">04</span><span class="badge">Демо</span></div>
+        <h3><a href="https://ligakukaa-cyber.github.io/coffee-shop-demo/" target="_blank" rel="noopener" data-cursor="link">Кофейня с меню и заказом</a></h3>
+        <p>Меню с фильтрами, корзина с подсчётом суммы и бесплатной доставкой от 900 ₽,
+          оформление заказа с проверкой телефона. Цены правятся в одном файле, без вёрстки.</p>
+        <ul class="work-tags"><li>Меню</li><li>Корзина</li><li>Доставка</li><li>Заказ</li></ul>
+        <a class="work-link magnetic" href="https://ligakukaa-cyber.github.io/coffee-shop-demo/" target="_blank" rel="noopener" data-cursor="open"><span>Собрать заказ</span><i></i></a>
+      </div>
+    </article>
+
+    <article class="work reveal-work">
+      <a class="work-media tilt" href="https://ligakukaa-cyber.github.io/lumen-watch-store/" target="_blank" rel="noopener" data-cursor="open">
+        <img src="assets/store.jpg" alt="LUMEN — интернет-магазин часов с 3D-витриной" loading="lazy" decoding="async">
+        <span class="work-shine" aria-hidden="true"></span>
+      </a>
+      <div class="work-body">
+        <div class="work-top"><span class="work-idx">05</span><span class="badge">Демо</span></div>
+        <h3><a href="https://ligakukaa-cyber.github.io/lumen-watch-store/" target="_blank" rel="noopener" data-cursor="link">Интернет-магазин часов с 3D-витриной</a></h3>
+        <p>Главная, каталог с фильтрами, карточки товаров и оформление заявки. Все фото моделей
+          сняты с 3D-модели, а флагман разбирается в живом 3D прямо на странице товара.</p>
+        <ul class="work-tags"><li>Магазин</li><li>Каталог · фильтры</li><li>3D</li><li>Корзина</li></ul>
+        <a class="work-link magnetic" href="https://ligakukaa-cyber.github.io/lumen-watch-store/" target="_blank" rel="noopener" data-cursor="open"><span>Открыть магазин</span><i></i></a>
+      </div>
+    </article>
+
+    <article class="work reveal-work">
+      <a class="work-media tilt" href="https://ligakukaa-cyber.github.io/product-landing-demo/" target="_blank" rel="noopener" data-cursor="open">
+        <img src="assets/lumen.jpg" alt="LUMEN Calibre 01 — часы разбираются прокруткой" loading="lazy" decoding="async">
+        <span class="work-shine" aria-hidden="true"></span>
+      </a>
+      <div class="work-body">
+        <div class="work-top"><span class="work-idx">06</span><span class="badge">Демо</span></div>
+        <h3><a href="https://ligakukaa-cyber.github.io/product-landing-demo/" target="_blank" rel="noopener" data-cursor="link">Часы, которые разбираются прокруткой</a></h3>
+        <p>Живой 3D в браузере: механизм идёт, колёса в зацеплении, стрелки показывают ваше время.
+          Прокрутка разбирает часы на 11 слоёв с подписями — без видео, всё считается на лету.</p>
+        <ul class="work-tags"><li>3D · WebGL</li><li>Motion-дизайн</li><li>Скролл-сценарий</li></ul>
+        <a class="work-link magnetic" href="https://ligakukaa-cyber.github.io/product-landing-demo/" target="_blank" rel="noopener" data-cursor="open"><span>Разобрать часы</span><i></i></a>
+      </div>
+    </article>
+
+    <article class="work reveal-work">
+      <a class="work-media tilt" href="https://ligakukaa-cyber.github.io/price-calculator-demo/" target="_blank" rel="noopener" data-cursor="open">
+        <img src="assets/calc.jpg" alt="Калькулятор цены изделия" loading="lazy" decoding="async">
+        <span class="work-shine" aria-hidden="true"></span>
+      </a>
+      <div class="work-body">
+        <div class="work-top"><span class="work-idx">07</span><span class="badge">Инструмент</span></div>
+        <h3><a href="https://ligakukaa-cyber.github.io/price-calculator-demo/" target="_blank" rel="noopener" data-cursor="link">Калькулятор цены изделия</a></h3>
+        <p>Честный расчёт по размеру, материалу и тиражу, превью в масштабе, таблица выгоды
+          по количеству и приём заявки с проверкой контакта. Встраивается на любой сайт.</p>
+        <ul class="work-tags"><li>Калькулятор</li><li>Логика расчёта</li><li>Заявки</li></ul>
+        <a class="work-link magnetic" href="https://ligakukaa-cyber.github.io/price-calculator-demo/" target="_blank" rel="noopener" data-cursor="open"><span>Посчитать</span><i></i></a>
+      </div>
+    </article>
+
+    <article class="work reveal-work">
+      <a class="work-media tilt" href="https://ligakukaa-cyber.github.io/coach-landing-demo/" target="_blank" rel="noopener" data-cursor="open">
+        <img src="assets/coach.jpg" alt="Лендинг для эксперта с формой записи" loading="lazy" decoding="async">
+        <span class="work-shine" aria-hidden="true"></span>
+      </a>
+      <div class="work-body">
+        <div class="work-top"><span class="work-idx">08</span><span class="badge">Демо</span></div>
+        <h3><a href="https://ligakukaa-cyber.github.io/coach-landing-demo/" target="_blank" rel="noopener" data-cursor="link">Лендинг для эксперта с записью</a></h3>
+        <p>Девять экранов: оффер, боли клиента, форматы и цены, ответы на вопросы и форма записи
+          с реальной проверкой ввода. Спокойная светлая тема — для доверия, а не для шоу.</p>
+        <ul class="work-tags"><li>Лендинг</li><li>Запись</li><li>Светлая тема</li></ul>
+        <a class="work-link magnetic" href="https://ligakukaa-cyber.github.io/coach-landing-demo/" target="_blank" rel="noopener" data-cursor="open"><span>Открыть лендинг</span><i></i></a>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+<!-- ЖИВОЙ ЗАМЕР -->
+<section class="live">
+  <div class="wrap">
+    <div class="live-head">
+      <h2 class="anim-up">Этот сайт — тоже моя работа</h2>
+      <p class="anim-fade">
+        <i class="live-dot" aria-hidden="true"></i>
+        Цифры ниже браузер посчитал сам, пока вы читаете эту строку — это не картинка.
+      </p>
+    </div>
+
+    <div class="live-grid">
+      <div class="live-item anim-fade">
+        <b><span data-live="load">—</span><em>с</em></b>
+        <span>за столько страница<br>появилась у вас на экране</span>
+      </div>
+      <div class="live-item anim-fade">
+        <b><span data-live="weight">—</span><em>КБ</em></b>
+        <span>весит сама страница:<br>вёрстка, стили, анимация</span>
+      </div>
+      <div class="live-item anim-fade">
+        <b><span data-live="fps">—</span><em>к/с</em></b>
+        <span>плавность анимации<br>на вашем устройстве</span>
+      </div>
+      <div class="live-item anim-fade">
+        <b><span data-live="width">—</span><em>px</em></b>
+        <span>ширина вашего экрана —<br>вёрстка уже под неё</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ПРОЦЕСС -->
+<section class="process" id="process">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="sec-num anim-fade">02</span>
+      <h2 class="sec-title anim-up">Как идёт работа</h2>
+      <p class="sec-note anim-fade">Прозрачно и по шагам — вы видите результат на каждом этапе, а не в конце.</p>
+    </div>
+
+    <ol class="steps">
+      <li class="step reveal-step">
+        <span class="step-n">01</span>
+        <h3>Обсуждаем задачу</h3>
+        <p>Что за бизнес, кто клиент, какое действие должен сделать посетитель. Здесь же — сроки
+          и точная цена, без «плюс-минус» по ходу дела.</p>
+      </li>
+      <li class="step reveal-step">
+        <span class="step-n">02</span>
+        <h3>Собираю структуру</h3>
+        <p>Тексты, порядок экранов и первый черновик страницы. Смотрите на живой ссылке
+          с телефона и компьютера, правим, пока не устроит.</p>
+      </li>
+      <li class="step reveal-step">
+        <span class="step-n">03</span>
+        <h3>Дизайн и анимация</h3>
+        <p>Наполняю страницу: типографика, фото, движение. Анимация — только там, где помогает
+          продавать, а не мешает читать.</p>
+      </li>
+      <li class="step reveal-step">
+        <span class="step-n">04</span>
+        <h3>Запуск и передача</h3>
+        <p>Подключаю домен, формы и аналитику, проверяю на телефонах, отдаю доступы
+          и показываю, как менять контент самому.</p>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<!-- ЧТО ВХОДИТ -->
+<section class="services">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="sec-num anim-fade">03</span>
+      <h2 class="sec-title anim-up">Что могу сделать</h2>
+    </div>
+    <div class="srv-grid">
+      <div class="srv reveal-card"><h3>Лендинг под ключ</h3><p>Один экран продажи: оффер, доверие, форма. С текстами, адаптивом и аналитикой.</p></div>
+      <div class="srv reveal-card"><h3>Интернет-магазин</h3><p>Каталог, фильтры, карточки, корзина и оплата. Наполнение карточек — тоже на мне.</p></div>
+      <div class="srv reveal-card"><h3>3D и анимация</h3><p>Товар, который крутится и разбирается в браузере. Без видео — живая сцена.</p></div>
+      <div class="srv reveal-card"><h3>Калькуляторы</h3><p>Расчёт цены и заявка прямо на странице. Встраивается в существующий сайт.</p></div>
+      <div class="srv reveal-card"><h3>Правки и доработки</h3><p>Ускорить, починить адаптив, добавить блок или форму на готовый сайт.</p></div>
+      <div class="srv reveal-card"><h3>Боты и автоматизация</h3><p>Telegram-боты: заявки, запись, уведомления и выгрузка в таблицу.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- КОНТАКТ -->
+<section class="contact" id="contact">
+  <div class="wrap contact-inner">
+    <span class="sec-num anim-fade">04</span>
+    <h2 class="contact-title anim-up">Расскажите,<br>что нужно сделать</h2>
+    <p class="contact-sub anim-fade">Отвечаю в течение дня. Опишите задачу своими словами —
+      сам задам нужные вопросы, назову срок и цену до начала работы.</p>
+    <a class="tg-btn magnetic" href="https://t.me/VladisavSSS" target="_blank" rel="noopener" data-cursor="open">
+      <span class="tg-ico" aria-hidden="true">
+        <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M21.9 4.3 18.9 19c-.2 1-.8 1.3-1.7.8l-4.6-3.4-2.2 2.1c-.3.3-.5.5-1 .5l.4-5 9-8.1c.4-.3-.1-.5-.6-.2L7.1 12.4 2.6 11c-1-.3-1-1 .2-1.4l17.7-6.8c.8-.3 1.5.2 1.4 1.5z"/></svg>
+      </span>
+      <span class="tg-text">Написать в Telegram<em>@VladisavSSS</em></span>
+      <i class="tg-arrow" aria-hidden="true"></i>
+    </a>
+    <div class="contact-note anim-fade">Можно и просто с вопросом — консультация бесплатная.</div>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="wrap foot-row">
+    <span>© <span id="year">2026</span> Владислав · веб-разработка</span>
+    <span class="foot-dis">Работы с пометкой «Демо» — собственные примеры, бренды и персонажи вымышлены</span>
+    <a href="https://t.me/VladisavSSS" target="_blank" rel="noopener" data-cursor="link">@VladisavSSS</a>
+  </div>
+</footer>
+
+<script src="js/vendor/lenis.min.js"></script>
+<script src="js/gold.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
